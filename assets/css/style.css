@@ -412,8 +412,8 @@ footer .heading-6 {
 .zoo-animals .grid {
 	list-style: none;
 	margin: 80px 0 0;
-	position: relative;
 	padding: 0;
+	position: relative;
 	z-index: 1;
 }
 
@@ -484,10 +484,12 @@ footer .heading-6 {
 	object-position: center top;
 }
 
-.zoo-animals .grid li h3 {
+.zoo-animals li h3 {
 	color: var(--hunyadi-yellow);
 	font-size: calc(24rem / 16);
 	margin: 0 0 4px;
+	font-weight: 600;
+	letter-spacing: .4px;
 	transition: .25s ease-in-out;
 }
 
@@ -512,18 +514,23 @@ footer .heading-6 {
 	align-items: center;
 	display: flex;
 	height: 100vh;
-	position: relative;
 	overflow: hidden;
+	position: relative;
 }
 
 .zoo-animal-hero picture {
 	height: 100%;
 	left: 0;
-	object-fit: cover;
 	position: absolute;
 	top: 0;
 	width: 100%;
 	z-index: -1;
+}
+
+.zoo-animal-hero picture img {
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
 }
 
 .zoo-animal-hero .container > div {
@@ -542,6 +549,12 @@ footer .heading-6 {
 	opacity: .75;
 }
 
+/*Tiger*/
+
+.zoo-animal-hero.tiger picture {
+	transform: rotateY(180deg);
+}
+
 /***Zoo Animal Info***/
 
 .zoo-animal-about {
@@ -549,14 +562,14 @@ footer .heading-6 {
 }
 
 .zoo-animal-about h2 .eyebrow {
-	margin: 0 0 8px;
 	color: var(--fern-green);
+	margin: 0 0 8px;
 }
 
 .zoo-animal-about p {
 	margin: 20px 0 0;
-	width: 800px;
 	max-width: 100%;
+	width: 800px;
 }
 
 /***Zoo Animals Related***/
@@ -567,15 +580,15 @@ footer .heading-6 {
 }
 
 .zoo-animals.related::before {
+	background: var(--oxford-blue);
 	content: '';
 	display: block;
-	background: var(--oxford-blue);
+	height: calc(100% - 240px);
 	left: 0;
 	position: absolute;
 	top: 0;
 	width: 100%;
 	z-index: -1;
-	height: calc(100% - 240px);
 }
 
 .zoo-animals.related h2 {
