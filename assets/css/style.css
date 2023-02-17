@@ -221,7 +221,8 @@ article {
 	z-index: -1;
 }
 
-.btn.underline-fancy:hover::before {
+.btn.underline-fancy:hover::before,
+.zoo-animals li a:hover .btn.underline-fancy::before {
 	left: auto;
 	right: 0;
 	width: 0%;
@@ -291,6 +292,7 @@ textarea::placeholder {
 header {
 	padding: 30px 0;
 	position: absolute;
+	z-index: 999;
 }
 
 header .flex {
@@ -307,14 +309,25 @@ header .logo:hover {
 }
 
 header nav ul li + li {
-	margin-left: 30px;
+	margin-left: 40px;
 }
 
-header nav ul li a.btn {
+header nav ul li .btn.underline-fancy {
 	font-size: calc(14rem / 16);
 	font-weight: 500;
 	letter-spacing: .2px;
 	text-transform: none;
+	--color: var(--space-cadet);
+}
+
+header nav ul li a.btn.active {
+	--color: var(--bice-blue);
+}
+
+header nav ul li a.btn.active:hover::before {
+	left: 0;
+	right: auto;
+	width: 100%;
 }
 
 /***************************************************************************************************************************************************************************************/
@@ -381,12 +394,12 @@ footer .heading-6 {
 	padding: 0;
 }
 
-.zoo-animals .grid li {
+.zoo-animals li {
 	grid-column: span 6;
 	min-height: 400px;
 }
 
-.zoo-animals .grid li a {
+.zoo-animals li a {
 	border-radius: 12px;
 	display: flex;
 	flex-direction: column;
@@ -399,7 +412,7 @@ footer .heading-6 {
 	transition: .25s ease-in-out;
 }
 
-.zoo-animals .grid li a::before {
+.zoo-animals li a::before {
 	background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
 	content: '';
 	display: block;
@@ -411,7 +424,22 @@ footer .heading-6 {
 	z-index: -1;
 }
 
-.zoo-animals .grid li picture {
+.zoo-animals li a::after {
+	background: var(--oxford-blue);
+	content: '';
+	display: block;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	transition: .25s ease-in-out;
+	mix-blend-mode: multiply;
+	opacity: .25;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+.zoo-animals li picture {
 	height: 100%;
 	left: 0;
 	object-fit: cover;
@@ -422,27 +450,57 @@ footer .heading-6 {
 	z-index: -2;
 }
 
-.zoo-animals .grid li picture img {
+.zoo-animals li picture img {
 	height: 100%;
 	object-fit: cover;
 	width: 100%;
 	object-position: top center;
 }
 
-.zoo-animals .grid li h3 {
+.zoo-animals li h3 {
 	color: var(--hunyadi-yellow);
 	font-size: calc(24rem / 16);
 	transition: .25s ease-in-out;
 	margin: 0 0 4px;
 }
 
-.zoo-animals .grid li p {
+.zoo-animals li p {
 	color: var(--white);
 	margin: 0 0 12px;
 }
 
-.zoo-animals .grid li a:hover h3 {
+.zoo-animals li a:hover h3 {
 	color: var(--carolina-blue);
+}
+
+/***************************************************************************************************************************************************************************************/
+
+/*ANIMAL PAGE STYLES*/
+
+/***************************************************************************************************************************************************************************************/
+
+/***Zoo Animals***/
+
+.zoo-animals.related {
+	background: var(--space-cadet);
+	position: relative;
+	z-index: 1;
+}
+
+.zoo-animals.related h2 {
+	color: var(--white);
+}
+
+.zoo-animals.related h2 .eyebrow {
+	color: var(--hunyadi-yellow);
+}
+
+.zoo-animals.related li {
+	grid-column: span 4;
+}
+
+.zoo-animals.related li a {
+	padding: 20px 30px 36px;
 }
 
 /***************************************************************************************************************************************************************************************/
