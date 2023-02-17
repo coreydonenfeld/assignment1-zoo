@@ -88,7 +88,6 @@ h5,
 h6,
 .heading-6 {
 	color: var(--space-cadet);
-	font-family: var(--heading-font);
 	margin: 0;
 }
 
@@ -121,6 +120,10 @@ h6,
 .heading-6 {
 	font: 400 calc(20rem / 16)/calc(32 / 20) var(--body-font-alt);
 	letter-spacing: .4px;
+}
+
+.heading-xl {
+	font: 700 calc(100rem / 16)/calc(100 / 100) var(--heading-font);
 }
 
 p,
@@ -330,6 +333,24 @@ header nav ul li a.btn.active:hover::before {
 	width: 100%;
 }
 
+/*Light*/
+
+header.light .logo {
+	color: var(--white);
+}
+
+header.light .logo:hover {
+	color: var(--honey-dew);
+}
+
+header.light nav ul li .btn.underline-fancy {
+	--color: var(--honey-dew);
+}
+
+header.light nav ul li .btn.underline-fancy.active {
+	--color: var(--columbia-blue);
+}
+
 /***************************************************************************************************************************************************************************************/
 
 /*FOOTER STYLES*/
@@ -391,7 +412,9 @@ footer .heading-6 {
 .zoo-animals .grid {
 	list-style: none;
 	margin: 80px 0 0;
+	position: relative;
 	padding: 0;
+	z-index: 1;
 }
 
 .zoo-animals li {
@@ -400,12 +423,12 @@ footer .heading-6 {
 }
 
 .zoo-animals li a {
+	align-items: flex-start;
 	border-radius: 12px;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
 	justify-content: flex-end;
-	align-items: flex-start;
 	overflow: hidden;
 	padding: 20px 40px 40px;
 	position: relative;
@@ -430,11 +453,11 @@ footer .heading-6 {
 	display: block;
 	height: 100%;
 	left: 0;
-	position: absolute;
-	transition: .25s ease-in-out;
 	mix-blend-mode: multiply;
 	opacity: .25;
+	position: absolute;
 	top: 0;
+	transition: .25s ease-in-out;
 	width: 100%;
 	z-index: -1;
 }
@@ -453,15 +476,15 @@ footer .heading-6 {
 .zoo-animals li picture img {
 	height: 100%;
 	object-fit: cover;
-	width: 100%;
 	object-position: top center;
+	width: 100%;
 }
 
 .zoo-animals li h3 {
 	color: var(--hunyadi-yellow);
 	font-size: calc(24rem / 16);
-	transition: .25s ease-in-out;
 	margin: 0 0 4px;
+	transition: .25s ease-in-out;
 }
 
 .zoo-animals li p {
@@ -479,12 +502,76 @@ footer .heading-6 {
 
 /***************************************************************************************************************************************************************************************/
 
-/***Zoo Animals***/
+/***Animal Hero***/
+
+.zoo-animal-hero {
+	align-items: center;
+	display: flex;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.zoo-animal-hero picture {
+	height: 100%;
+	left: 0;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+.zoo-animal-hero .container > div {
+	text-align: center;
+	width: calc(568 / 1200 * 100%);
+}
+
+.zoo-animal-hero h1 {
+	color: var(--white);
+	margin: 0 0 8px;
+}
+
+.zoo-animal-hero p {
+	color: var(--white);
+	margin: 0;
+	opacity: .75;
+}
+
+/***Zoo Animal Info***/
+
+.zoo-animal-about {
+	padding: 140px 0;
+}
+
+.zoo-animal-about h2 .eyebrow {
+	margin: 0 0 8px;
+	color: var(--fern-green);
+}
+
+.zoo-animal-about p {
+	margin: 20px 0 0;
+	width: 800px;
+	max-width: 100%;
+}
+
+/***Zoo Animals Related***/
 
 .zoo-animals.related {
-	background: var(--space-cadet);
 	position: relative;
 	z-index: 1;
+}
+
+.zoo-animals.related::before {
+	content: '';
+	display: block;
+	background: var(--oxford-blue);
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+	height: calc(100% - 240px);
 }
 
 .zoo-animals.related h2 {
@@ -492,7 +579,7 @@ footer .heading-6 {
 }
 
 .zoo-animals.related h2 .eyebrow {
-	color: var(--hunyadi-yellow);
+	color: var(--tea-green);
 }
 
 .zoo-animals.related li {
