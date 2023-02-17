@@ -485,7 +485,7 @@ footer .heading-6 {
 }
 
 .zoo-animals li h3 {
-	color: var(--hunyadi-yellow);
+	color: var(--white);
 	font-size: calc(24rem / 16);
 	margin: 0 0 4px;
 	font-weight: 600;
@@ -516,6 +516,35 @@ footer .heading-6 {
 	height: 100vh;
 	overflow: hidden;
 	position: relative;
+	z-index: 1;
+}
+
+.zoo-animal-hero::after {
+	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+	content: '';
+	display: block;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	opacity: .3;
+	top: 0%;
+	width: 100%;
+	z-index: -1;
+}
+
+.zoo-animal-hero::before {
+	background: var(--oxford-blue);
+	content: '';
+	display: block;
+	height: 100%;
+	left: 0;
+	mix-blend-mode: multiply;
+	opacity: .25;
+	position: absolute;
+	top: 0;
+	transition: .25s ease-in-out;
+	width: 100%;
+	z-index: -1;
 }
 
 .zoo-animal-hero picture {
@@ -524,7 +553,7 @@ footer .heading-6 {
 	position: absolute;
 	top: 0;
 	width: 100%;
-	z-index: -1;
+	z-index: -2;
 }
 
 .zoo-animal-hero picture img {
@@ -546,7 +575,6 @@ footer .heading-6 {
 .zoo-animal-hero p {
 	color: var(--white);
 	margin: 0;
-	opacity: .75;
 }
 
 /*Tiger*/
