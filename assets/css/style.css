@@ -406,7 +406,7 @@ footer .heading-6 {
 	height: 100%;
 	left: 0;
 	position: absolute;
-	top: 25%;
+	top: 20%;
 	width: 100%;
 	z-index: -1;
 }
@@ -427,6 +427,10 @@ footer .heading-6 {
 	object-fit: cover;
 	width: 100%;
 	object-position: top center;
+}
+
+.zoo-animals .grid li:nth-of-type(2) picture img {
+	object-position: center top;
 }
 
 .zoo-animals .grid li h3 {
