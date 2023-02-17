@@ -14,12 +14,12 @@
         <!--Header-->
 
         <header>
-            <div class="container">
-                <a href="/" class="logo">Corey's Zoo</a>
-                <nav>
+            <div class="container flex">
+                <a href="/" class="logo heading-4">Corey's Zoo</a>
+                <nav class="flex">
                     <ul>
                         <li>
-                            <a href="animals/tiger.html">Tigers</a>
+                            <a href="animals/lion.html" class="btn underline-fancy inverse">Lions</a>
                         </li>
                     </ul>
                 </nav>
@@ -34,8 +34,8 @@
 
             <section class="zoo-welcome">
                 <div class="container">
-                    <h1>Welcome to my Zoo!</h1>
-                    <p>We have Lions, Owls, Pandas, and Tigers</p>
+                    <h1>Welcome to the Zoo!</h1>
+                    <p class="heading-6">We have Lions, Owls, Pandas, and Tigers.</p>
                 </div>
             </section>
 
@@ -43,13 +43,20 @@
 
             <section class="zoo-animals">
                 <div class="container">
-                    <h2>Animals</h2>
-                    <ul>
+                    <h2>
+                        <span class="eyebrow">Animals</span>
+                        Our Zoo has many animals.
+                    </h2>
+                    <ul class="grid">
                         <li>
-                            <a href="animals/">
-                                <img src="assets/images/lion.jpg" alt="Lion">
-                                <h3>Lions</h3>
-                                <p>The Lion is a ...</p>
+                            <a href="animals/lion.html">
+                                <picture>
+                                    <source srcset="assets/images/lion.webp" type="image/webp">
+                                    <img src="assets/images/lion.webp" alt="Lion">
+                                </picture>
+                                <h3 class="heading-6">Lions</h3>
+                                <p>The world's most social felines, lions roam the savannas and grasslands of the African continent, hunting cooperatively and raising cubs in prides.</p>
+                                <span class="btn underline-fancy light">Learn More</span>
                             </a>
                         </li>
                     </ul>
@@ -61,9 +68,9 @@
         <!--Footer-->
 
         <footer>
-            <div class="container">
-                <p>We are a virtual zoo.</p>
-                <a href="/">View All Assignments</a>
+            <div class="container flex">
+                <p class="heading-6">We are a virtual zoo.</p>
+                <a href="/" class="btn underline-fancy light">View All Assignments</a>
             </div>
         </footer>
 
