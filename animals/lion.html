@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Corey's Zoo | Lions, Owls, Pandas, and Tigers</title>
+        <title>Corey's Zoo | Learn About Lions</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
         <link rel="stylesheet" href="https://use.typekit.net/jwe7vgi.css">
-        <script src="assets/js/jazzyscroll.js"></script>
-        <script src="assets/js/script.js"></script>
+        <script src="../assets/js/jazzyscroll.js"></script>
+        <script src="../assets/js/script.js"></script>
     </head>
     <body>
 
         <!--Header-->
 
-        <header>
+        <header class="light">
             <div class="container flex">
                 <a href="/" class="logo heading-4">Corey's Zoo</a>
                 <nav>
                     <ul class="flex">
                         <li>
-                            <a href="animals/lion.html" class="btn underline-fancy inverse">Lions</a>
+                            <a href="lion.html" class="btn underline-fancy active">Lions</a>
                         </li>
                         <li>
-                            <a href="animals/owl.html" class="btn underline-fancy inverse">Owls</a>
+                            <a href="owl.html" class="btn underline-fancy inverse">Owls</a>
                         </li>
                         <li>
-                            <a href="animals/panda.html" class="btn underline-fancy inverse">Pandas</a>
+                            <a href="panda.html" class="btn underline-fancy inverse">Pandas</a>
                         </li>
                         <li>
-                            <a href="animals/tiger.html" class="btn underline-fancy inverse">Tigers</a>
+                            <a href="tiger.html" class="btn underline-fancy inverse">Tigers</a>
                         </li>
                     </ul>
                 </nav>
@@ -39,40 +39,58 @@
 
         <main>
 
-            <!--Zoo Welcome-->
+            <!--Animal Hero-->
 
-            <section class="zoo-welcome">
+            <section class="zoo-animal-hero lion">
+                <picture>
+                    <source srcset="../assets/images/lion.webp" type="image/webp">
+                    <img src="../assets/images/lion.webp" alt="Lion">
+                </picture>
                 <div class="container">
-                    <h1>Welcome to the Zoo!</h1>
-                    <p class="heading-6">We have Lions, Owls, Pandas, and Tigers.</p>
+                    <div>
+                        <h1 class="heading-xl">Lions</h1>
+                        <p class="heading-6">The Lion is a fericious animal.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!--Animal About-->
+
+            <section class="zoo-animal-about">
+                <div class="container">
+                    <h2>
+                        <span class="eyebrow">About</span>
+                        Learn about the Lions
+                    </h2>
+                    <p>The lion is a large cat of the genus Panthera native to Africa and India. It has a muscular, broad-chested body; short, rounded head; round ears; and a hairy tuft at the end of its tail. It is sexually dimorphic; adult male lions are larger than females and have a prominent mane.</p>
                 </div>
             </section>
 
             <!--Zoo Animals-->
 
-            <section class="zoo-animals">
+            <section class="zoo-animals related">
                 <div class="container">
                     <h2>
-                        <span class="eyebrow">Animals</span>
-                        Our Zoo has four distinct, exotic animals.
+                        <span class="eyebrow">Other Animals</span>
+                        Our Zoo has three other distinct, exotic animals.
                     </h2>
                     <ul class="grid">
-                        <li>
-                            <a href="animals/lion.html">
+                        <!-- <li>
+                            <a href="lion.html">
                                 <picture>
-                                    <source srcset="assets/images/lion.webp" type="image/webp">
-                                    <img src="assets/images/lion.webp" alt="Lion">
+                                    <source srcset="../assets/images/lion.webp" type="image/webp">
+                                    <img src="../assets/images/lion.webp" alt="Lion">
                                 </picture>
                                 <h3 class="heading-6">Lions</h3>
                                 <p>The world's most social felines, lions roam the savannas and grasslands of the African continent, hunting cooperatively and raising cubs in prides.</p>
                                 <span class="btn underline-fancy light">Learn More</span>
                             </a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="animals/owl.html">
+                            <a href="owl.html">
                                 <picture>
-                                    <source srcset="assets/images/owl.webp" type="image/webp">
-                                    <img src="assets/images/owl.webp" alt="Lion">
+                                    <source srcset="../assets/images/owl.webp" type="image/webp">
+                                    <img src="../assets/images/owl.webp" alt="Lion">
                                 </picture>
                                 <h3 class="heading-6">Owls</h3>
                                 <p>Owls are birds from the order Strigiformes, which includes over 200 species of mostly solitary and nocturnal birds of prey.</p>
@@ -80,10 +98,10 @@
                             </a>
                         </li>
                         <li>
-                            <a href="animals/panda.html">
+                            <a href="panda.html">
                                 <picture>
-                                    <source srcset="assets/images/panda.webp" type="image/webp">
-                                    <img src="assets/images/panda.webp" alt="Lion">
+                                    <source srcset="../assets/images/panda.webp" type="image/webp">
+                                    <img src="../assets/images/panda.webp" alt="Lion">
                                 </picture>
                                 <h3 class="heading-6">Pandas</h3>
                                 <p>The giant panda, is a bear species endemic to China. It is characterised by its bold black-and-white coat and rotund body.</p>
@@ -91,10 +109,10 @@
                             </a>
                         </li>
                         <li>
-                            <a href="animals/tiger.html">
+                            <a href="tiger.html">
                                 <picture>
-                                    <source srcset="assets/images/tiger.webp" type="image/webp">
-                                    <img src="assets/images/tiger.webp" alt="Lion">
+                                    <source srcset="../assets/images/tiger.webp" type="image/webp">
+                                    <img src="../assets/images/tiger.webp" alt="Lion">
                                 </picture>
                                 <h3 class="heading-6">Tigers</h3>
                                 <p>The tiger is the largest living cat species. It is most recognisable for its dark vertical stripes on orange fur with a white underside.</p>
